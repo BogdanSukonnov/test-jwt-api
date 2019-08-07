@@ -45,7 +45,7 @@ public class AuthRestService {
         }
     }
 
-    @RequestMapping(value = "login", method = RequestMethod.POST)
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
     public ResponseEntity<?> createAuthenticationToken(@RequestParam String username, @RequestParam String password) throws AuthenticationException {
         ApplicationUser applicationUser = applicationUserRepository.findByUsername(username);
         if (applicationUser == null) {
